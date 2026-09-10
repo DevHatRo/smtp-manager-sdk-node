@@ -1,6 +1,6 @@
 {
   "name": "@devhatro/smtp-manager-sdk",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Zero-dependency Node.js SDK for the SMTP Manager transactional send API",
   "type": "module",
   "main": "./dist/index.cjs",
