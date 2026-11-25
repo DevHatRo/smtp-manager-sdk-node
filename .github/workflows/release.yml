@@ -20,7 +20,7 @@ jobs:
       # No inputs: release-please reads release-please-config.json and
       # .release-please-manifest.json (manifest mode), which is what makes
       # `extra-files` bump src/version.ts alongside package.json.
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v5
         id: release
 
   publish:
@@ -32,11 +32,11 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4 # version comes from package.json "packageManager"
+      - uses: pnpm/action-setup@v6 # version comes from package.json "packageManager"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: pnpm
